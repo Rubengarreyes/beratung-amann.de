@@ -1040,7 +1040,8 @@
             </div>
             <div class="booking-form">
                 <h3>Terminanfrage</h3>
-                <form id="contactForm">
+                <!-- HIER IST DIE ÄNDERUNG: action auf Formspree, method POST, keine ID mehr -->
+                <form action="https://formspree.io/f/xlgozowk" method="POST">
                     <div class="form-group">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
@@ -1185,18 +1186,6 @@
                     question.querySelector('span:last-child').textContent = '+';
                 }
             });
-        });
-
-        // Formular-Behandlung
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Hier würde normalerweise der Formularversand erfolgen
-            // Für diese Demo zeigen wir einfach eine Bestätigung an
-            alert('Vielen Dank für Ihre Anfrage! Ich werde mich in Kürze bei Ihnen melden.');
-            contactForm.reset();
         });
 
         // Sanftes Scrollen für Ankerlinks
